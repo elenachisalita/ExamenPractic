@@ -1,13 +1,16 @@
 package sample;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import sample.Service.RentService;
 import javafx.stage.Stage;
 
 public class RentController {
+
+    public TableView tableViewRents;
+    public TableColumn tableColumnIdRent;
+    public TableColumn tableColumnNumberOfDays;
+    public TableColumn tableColumnKmUsed;
 
     public Spinner spnId;
     public Spinner spnIdCar;

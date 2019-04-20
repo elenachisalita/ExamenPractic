@@ -37,12 +37,43 @@
             </TableColumn>
         </columns>
     </TableView>
+
+
+
+    <TableView fx:id="tableViewRents" editable="true">
+        <columns>
+            <TableColumn fx:id="tableColumnRent" text="idRent">
+                <cellValueFactory>
+                    <PropertyValueFactory property="idRent" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnNumberOfDays" text="Number of days">
+                <cellValueFactory>
+                    <PropertyValueFactory property="numberOfDays" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnKmUsed" text="Kilometers">
+                <cellValueFactory>
+                    <PropertyValueFactory property="usedKm" />
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+    </TableView>
     <TextField fx:id="txtId" promptText="ID" />
     <TextField fx:id="txtModel" promptText="Model" />
     <TextField fx:id="txtKm" promptText="Km" />
     <TextField fx:id="txtPrice" promptText="Price" />
 
     <Button fx:id="btnAdd" text="Add car" onAction="#btnAddClick" />
+
+
+
+    <TextField fx:id="txtIdCar" promptText="ID" />
+    <TextField fx:id="txtNumberOfDays" promptText="Number Of Days" />
+    <TextField fx:id="txtKmUsed" promptText="Km USED" />
+
+    <Button fx:id="btnAddRent" text="Add rent" onAction="#btnRentAddClick" />
 
 
 
