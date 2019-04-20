@@ -1,0 +1,49 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TextField?>
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8.0.172-ea"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="sample.CarController">
+
+    <TableView fx:id="tableViewCars" editable="true">
+        <columns>
+            <TableColumn fx:id="tableColumnId" text="id">
+                <cellValueFactory>
+                    <PropertyValueFactory property="id" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnModel" text="Model">
+                <cellValueFactory>
+                    <PropertyValueFactory property="model" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnKm" text="Kilometers">
+                <cellValueFactory>
+                    <PropertyValueFactory property="km" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="tableColumnPrice" text="Price">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    <TextField fx:id="txtId" promptText="ID" />
+    <TextField fx:id="txtModel" promptText="Model" />
+    <TextField fx:id="txtKm" promptText="Km" />
+    <TextField fx:id="txtPrice" promptText="Price" />
+
+    <Button fx:id="btnAdd" text="Add car" onAction="#btnAddClick" />
+
+
+
+</VBox>
